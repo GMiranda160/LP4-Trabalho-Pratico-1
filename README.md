@@ -1,7 +1,5 @@
 # 🛒 Xhopii - Front-End E-Commerce
 
-Trabalho Prático 1 da disciplina de Técnicas Avançadas em Programação Web e Mobile (AMS - Fatec Presidente Prudente). O objetivo é implementar o Front-End completo de um sistema WEB de E-commerce.
-
 ## Tecnologias e Regras
 
 * **HTML5 Semântico** (Obrigatório)
