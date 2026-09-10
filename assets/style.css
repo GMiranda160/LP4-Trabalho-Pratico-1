@@ -1,0 +1,46 @@
+/* 
+==========================================
+   0. ROOT (PADRONIZAÇÃO)
+========================================== 
+*/
+
+:root {
+   --cor-primaria: rgba(251, 86, 48);
+   --cor-secundaria: rgba(255, 120, 62);
+   --cor-cinza-claro: rgba(215, 215, 215);
+   --cor-cinza-escuro: rgba(195, 195, 195);
+}
+   
+/* Para usar um padrão do root basta usar a seguinte anotação:
+   nome_da_propriedade: var(--nome-da-variavel);
+   Exemplo:
+   color: var(--cor-primaria); << Ele vai entender que é aquele laranja forte.   */
+
+* {
+   font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+/* 
+==========================================
+1. ESTILOS GERAIS, HEADER E FOOTER (DEV 1)
+========================================== 
+*/
+
+
+
+/* 
+==========================================
+2. FORMULÁRIOS DE CADASTRO (DEV 2)
+========================================== 
+*/
+
+   
+
+/* 
+==========================================
+3. GRIDS E LISTAGENS DE VISUALIZAÇÃO (DEV 3)
+========================================== 
+*/
+   
+
+   
