@@ -14,7 +14,7 @@
         </div>
         <a class = "topo_acao" href="../index.html">Sair</a>
         
-        <nav class="menu" aria-label="menu principal"></nav>
+        <nav class="menu" aria-label="menu principal">
         <a href="home.html">Home</a>
         <a href="cadastro-cliente.html">Cadastrar Cliente</a>
         <a href="cadastro-funcionario.html" class="ativo">Cadastrar Funcionario</a>
@@ -22,6 +22,21 @@
         <a href="ver-clientes.html">Ver Cliente</a>
         <a href="ver-funcionarios.html">Ver Funcionário</a>
         <a href="ver-produtos.html">Ver Produto</a>
+    </nav>
+    
+    <main class="conteudo">
+        <section class="card card--largo" aria-labelledby="titulo-func">
+            <hi class="card_titulo" id="titulo-func">Cadastrar Funcionario</hi>
+
+            <form id="form-funcionario" novalidate>
+                <div class="campo">
+                    <label for="nome-func">Nome</label>
+                    <input type="text" id="nome-func" name="nome" placeholder="Nome" required>
+                    
+                </div>
+            </form>
+        </section>
+    </main>
     </header>
 
     <main>
