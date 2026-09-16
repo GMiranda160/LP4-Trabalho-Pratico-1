@@ -145,8 +145,10 @@ git add .
 git commit -m "Mensagem do que foi alterado"
 
 # Envie para o GitHub
-git push -u origin NOME-DA-SUA-BRANCH
-# Exemplo: git push -u origin feature/cadastros
+git push -u origin main
+ou
+git push
+se já estiver na main...
 ```
 
 **4. Quando terminar a base do seu projeto e quiser testar o todo (AVISE O GRUPO ANTES DE FAZER ESSE PASSO!)**
