@@ -133,20 +133,7 @@ Entre em uma pasta no Visual Studio Code e dê o comando:
 git clone https://github.com/GMiranda160/LP4-Trabalho-Pratico-1.git
 ```
 
-**3. Trabalhem em Branches separadas**
-Garanta que ninguém altere o mesmo arquivo ao mesmo tempo:
-```bash
-# Para o Desenvolvedor 1:
-git checkout -b feature/autenticacao-home
-
-# Para o Desenvolvedor 2:
-git checkout -b feature/cadastros
-
-# Para o Desenvolvedor 3:
-git checkout -b feature/visualizacoes
-```
-
-**4. Para manter sua branch atualizada com suas modificações**
+**3. Para manter sua branch atualizada com suas modificações**
 ```bash
 # Verifique quais arquivos foram alterados
 git status
@@ -162,7 +149,7 @@ git push -u origin NOME-DA-SUA-BRANCH
 # Exemplo: git push -u origin feature/cadastros
 ```
 
-**5. Quando terminar a base do seu projeto e quiser testar o todo (AVISE O GRUPO ANTES DE FAZER ESSE PASSO!)**
+**4. Quando terminar a base do seu projeto e quiser testar o todo (AVISE O GRUPO ANTES DE FAZER ESSE PASSO!)**
 ```bash
 # 1. Volte para a branch main local
 git checkout main
