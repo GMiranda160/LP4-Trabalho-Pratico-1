@@ -151,19 +151,4 @@ git push
 se já estiver na main...
 ```
 
-**4. Quando terminar a base do seu projeto e quiser testar o todo (AVISE O GRUPO ANTES DE FAZER ESSE PASSO!)**
-```bash
-# 1. Volte para a branch main local
-git checkout main
-
-# 2. Baixe e aplique as atualizações do GitHub na sua main local
-git pull origin main
-
-# 3. Volte para a sua branch individual
-git checkout NOME-DA-SUA-BRANCH
-
-# 4. Sincronize/Junte as novidades da main na sua branch
-git merge main
-```
-
 **Dica**: Caso ocorra um conflito de merge, não entrem em pânico. Abram o VS Code, resolvam os conflitos (geralmente nas linhas marcadas com `<<<<<<<`), salvem o arquivo e façam um novo commit.
