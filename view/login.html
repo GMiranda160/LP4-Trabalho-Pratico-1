@@ -6,18 +6,47 @@
     <title>Login - Xhopii</title>
     <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body>
+<body class="body-login">
     <header>
         <nav></nav>
     </header>
 
-    <main>
-        <section>
+    <main class="main-login">
+        <section class="login-base">
             <!-- Formulário de Login -->
+            <div class="login-conteudo"> 
+                <form action="../index.html" method="GET">
+                    
+                    <h2 style="text-align: center; margin-top: 20px;">Login</h2>
+                    <div class="Email-login">
+                        <input class="input-login" type="text" id="" name="Email" placeholder="Email" required>
+                    </div>
+                    <div class="senha-login">   
+                        <input class="input-login" type="password" id="" name="Senha" placeholder="Senha" required>
+                    </div>
+                        <button type="submit" class="button-login">ENTRE</button>
+                    
+                    <div style="margin-left: 15px; text-align: center;">
+                        <a href="" style="font-size: 11px; text-decoration: none;">esqueci minha senha</a>
+                        <a href="" style="font-size: 11px; text-decoration: none;">fazer login com SMS</a>
+                    </div>
+                    
+                    <p style="text-align: center; margin-top: 10px;">OU</p>
+                    
+                    <div style="margin-top: 10px; display: flex; gap: 25px;">
+                        <button class="button-login2"><img class="img-button" src="../assets/img/login-button/facebook.png" alt=""> Facebook</button>
+                        <button class="button-login2"><img class="img-button" src="../assets/img/login-button/pesquisa.png" alt=""> Google</button>
+                        <button class="button-login2"><img class="img-button" src="../assets/img/login-button/logotipo-da-apple.png" alt=""> Apple</button>
+                    </div>
+                    <div style="text-align: center; margin-top: 40px;">Novo na Xhopii? <a style="text-decoration: none; color: orangered;" href="cadastro-cliente.html">Cadastrar</a></div>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer></footer>
     <script src="../assets/script.js"></script>
+    <script>renderHeader(false);</script>
+    <script>renderFooter(false)</script>
 </body>
 </html>

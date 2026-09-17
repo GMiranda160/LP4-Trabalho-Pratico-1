@@ -216,7 +216,81 @@ header {
     font-size: 0.75rem;
     color: var(--cor-cinza-escuro);
 }
+/* 
+=======================================
+1.5 é meu
+=======================================
+*/
+.body-login{
+    background-color: orangered;
 
+    
+}
+
+.main-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login-base{
+    background-color: white;
+    height: 550px;
+    width: 450px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 7px;
+}
+
+.login-conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px 10px 10px;
+}
+
+.Email-login{
+    margin-top: 50px;
+    height: 10px;
+}
+
+.senha-login{
+    margin-top: 70px;
+}
+.input-login{
+    height: 50px;
+    width: 350px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.button-login{
+    background-color: orangered;
+    border: none;
+    color: white;
+    height: 30px;
+    width: 350px;
+    margin-top: 20px;
+    
+}
+
+.img-button {
+    height: 20px;
+}
+
+.button-login2{
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 /* 
 ==========================================
 2. FORMULÁRIOS DE CADASTRO (DEV 2)
