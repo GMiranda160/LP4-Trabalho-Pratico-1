@@ -61,7 +61,7 @@ Para otimizar o desenvolvimento via **Git** sem sobrepor códigos de outros memb
   * `view/redefinir-senha.html` (Interface de Redefinição de Senha)
   * `view/produto.html` (Visualizar produto específico)
 * **Tarefas de JS/CSS**:
-  * Configurar e estilizar o **Cabeçalho (Header/Navbar)** e **Rodapé (Footer)** padrão (para reaproveitamento).
+  * ~~Configurar e estilizar o **Cabeçalho (Header/Navbar)** e **Rodapé (Footer)** padrão (para reaproveitamento).~~ Implementado.
   * Implementar o carrossel na Home usando Bootstrap.
   * Lógica de redirecionamento: *Login ➔ Home*, *Esqueci a Senha ➔ Redefinir Senha*, *Redefinir Senha ➔ Login/Home*.
 
