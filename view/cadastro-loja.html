@@ -7,12 +7,48 @@
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <header>
-        <nav></nav>
+    <header class="topo">
+        <div class="topo_marca">
+            <img src="../assets/logo.png" alt="Logo Xhopii">
+            <span>Xhopii</span>
+        </div>
+        <a class="topo_acao" href="../index.html">Sair</a>
+        
     </header>
 
-    <main>
-        <section>
+    <main class="conteudo">
+        <section class="card card--largo" aria-labelledby="titulo-loja">
+            <h1 class="card_titulo" id="titulo-loja">Cadastrar Loja</h1>
+
+            <form id="form-loja" novalidate>
+                <div class="campo">
+                    <label for="nome-loja">Nome da Loja</label>
+                    <input type="text" id="nome-loja" name="nome-loja" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" maxlength="18" required>
+                </div>
+
+                <div class="email">
+                    <label for="email-loja">Email</label>
+                    <input type="email" id="email-loja" name="email-loja" placeholder="Email" required>
+                </div>
+                
+
+                <div class="campo">
+                    <label for="telefone-loja">Telefone</label>
+                    <input type="tel" id="telefone-loja" name="telefone-loja" placeholder="Telefone" maxlength="15" required>
+                </div>
+
+                <div class="campo">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" name="endereco" placeholder="Rua, número, cidade -UF" required>
+                </div>
+
+
+            </form>
             <!-- Formulário de Cadastro de Loja -->
         </section>
     </main>

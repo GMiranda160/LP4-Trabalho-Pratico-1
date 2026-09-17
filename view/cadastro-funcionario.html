@@ -7,7 +7,15 @@
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <header></header>
+    <header class="topo">
+        <div class="topo_marca">
+            <img src="../assets/logo.png" alt="Logo Xhopii">
+            <span>Xhopii</span>
+        </div>
+        <a class="topo_acao" href="../index.html">Sair</a>
+        
+    </header>
+    
     
     <main class="conteudo">
         <section class="card card--largo" aria-labelledby="titulo-func">
@@ -22,15 +30,55 @@
                     <label for="sobrenome-func">Sobrenome</label>
                     <input type="text" id="sobrenome-func" name="sobrenome" placeholder="Sobrenome" required>
                 </div>
+                
 
                 <div class="campo">
                     <label for="cpf-func">CPF</label>
                     <input type="text" id="cpf-func" name="cpf" placeholder="CPF" maxlength="15" required>
                 </div>
                 
+                <div class="campo">
+                    <label for="nascimento-func">Data de Nascimento</label>
+                    <input type="date" id="nascimento-func" name="nascimento" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone-func">Telefone</label>
+                    <label type="tel" id="telefone-func" name="telefone" placeholder="Telefone" maxlenght="15" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cargo">Cargo/Função</label>
+                    <input type="text" id="cargo" name="cargo" placeholder="Cargo/Função" required>
+                </div>
+
+                <div class="campo">
+                    <label for="salario">Salário</label>
+                    <input type="number" id="salario" name="salario" placeholder="Salário" step="0,01" min="0" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email-func">Email</label>
+                    <input type="email" id="email-func" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha-func">Senha</label>
+                    <input type="password" id="senha-func" name="senha" placeholder="Senha" required>
+                </div>
+
+               
+                <div class="campo">
+                    <label for="foto-func">Foto</label>
+                    <input type="file" id="foto-func" name="foto" accept="image/*">
+                </div>
+
+                <button type="submit" class="btn">Cadastrar</button>
             </form>
         </section>
     </main>
+
+    <script src="../script.js"></script>
 
     <footer></footer>
     <script src="../assets/script.js"></script>
