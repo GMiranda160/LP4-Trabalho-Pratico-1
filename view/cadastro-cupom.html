@@ -7,17 +7,52 @@
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <header>
-        <nav></nav>
+    <header class="topo">
+        <div class="topo_marca">
+            <img src="../assets/logo.png" alt="Logo Xhopii">
+        </div>
+        <a class="topo_acao" href="../index.html">Sair</a>
+       
     </header>
 
-    <main>
-        <section>
+   
+
+    
+
+    <main class="conteudo">
+        <section class="card card--largo" aria-labelledby="titulo-cupom">
+            <h1 class="card_titulo" id="titulo-cupom">Cadastrar Cupom de Desconto</h1>
+
+            <form id="form-cupom" novalidate>
+                <div class="campo">
+                    <label for="codigo">Código do Cupom:</label>
+                    <input type="text" id="codigo" name="codigo" placeholder="Ex.: XHOPII110" required>
+                </div>
+
+                <div class="campo">
+                    <label for="percentual">Percentual de Desconto (%):</label>
+                    <input type="number" id="percentual" name="percentual" placeholder="Percentual" min="1" max="100" required>
+                </div>
+
+                <div class="campo">
+                    <label for="validade">Data de Validade:</label>
+                    <input type="date" id="validade" name="validade" required>
+                </div>
+
+                <div class="campo">
+                    <label for="descricao-cupom">Descrição</label>
+                    <textarea id="descricao-cupom" name="descricao-cupom" rows ="3" placeholder="Descrição do cupom" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">CADASTRAR</button>
+            </form>
             <!-- Formulário de Cadastro de Cupom de Desconto -->
         </section>
     </main>
 
     <footer></footer>
     <script src="../assets/script.js"></script>
+    <script>renderHeader(false);</script>
+    <script>renderFooter(false)</script>
 </body>
 </html>
