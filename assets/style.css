@@ -231,5 +231,83 @@ header {
 ========================================== 
 */
    
+.background-cinza {
+    background-color: var(--cor-cinza-escuro);
+    display: flex;
+    justify-content: center;
+}
 
+.background-conteudo {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 75vw;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.background-conteudo h2 {
+    color: var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
    
+.grid-layout {
+    display: grid;
+    justify-content: space-evenly;
+}
+
+.card-produto {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 0.375rem;
+    box-shadow: 0.125rem 0.125rem 0.5rem var(--cor-cinza-escuro);
+    border: 0.125rem solid rgba(255, 255, 255, 0);
+    color: var(--cor-cinza-escuro);
+    max-width: 17.5vw;
+}
+
+.card-produto:hover {
+    border: 0.125rem solid rgba(251, 85, 48, 0.9);
+    transition: all .5s;
+}
+
+.card-produto img {
+    height: 25vh;
+    width: 15vw;
+}
+
+.card-nome-produto {
+    color: rgb(109, 109, 109);
+    font-weight: 600;
+    margin: 0.25rem 0 1rem 0;
+}
+
+.card-descricao-produto {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    width: 95%;
+    margin-bottom: 1.25rem;    
+    gap: 1rem 0.1rem;
+}
+
+.card-descricao-produto h4 {
+    color: rgba(0, 0, 0, 0.863);
+}
+
+.card-preco-produto {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.card-preco-produto h4 {
+    color: var(--cor-primaria);
+}
