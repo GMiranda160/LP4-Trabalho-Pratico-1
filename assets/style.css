@@ -274,6 +274,7 @@ header {
     width: 350px;
     margin-top: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .img-button {
