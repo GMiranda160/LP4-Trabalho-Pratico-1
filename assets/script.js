@@ -101,10 +101,40 @@ function renderFooter(naRaiz = true) {
 // 2. FORMULÁRIOS DE CADASTRO (DEV 2)
 // ==========================================
 
+// FUNÇÃO QUE EXIBE O NOME DO ARQUIVO SELECIONADO NO SELETOR DE FOTO
+document.querySelectorAll('.input-arquivo').forEach((input) => {
+    input.addEventListener('change', () => {
+        const nome = input.files.length ? input.files[0].name : 'Nenhum arquivo escolhido';
+        const alvo = input.closest('.campo-foto').querySelector('.arquivo-nome');
+        if (alvo) alvo.textContent = nome;
+    });
+});
+
 
 
 // ==========================================
 // 3. GRIDS E LISTAGENS DE VISUALIZAÇÃO (DEV 3)
 // ==========================================
 
+// FUNÇÃO DE RENDERIZAR O GRID DE PRODUTOS NO HTML
+// Chamar com: <script>renderGridProdutos(10);</script>
+function renderGridProdutos(quantidade) {
+    const grid = document.querySelector('.grid-layout');
+    if (!grid) return;
 
+    const card = `
+        <div class="card-produto">
+            <img src="../assets/img/camisa/camisa_preta.png">
+            <p class="card-nome-produto">Camisa Desenvolvedor Front-End</p>
+            <div class="card-descricao-produto">
+                <h4>Fabricante:</h4><p>Eletiva Uniformes</p>
+                <h4>Descrição:</h4><p>Uma camisa ideal para progamar por mais de 12 horas.</p>
+            </div>
+            <div class="card-preco-produto">
+                <h4>R$ 59,90</h4><p>171 disponíveis</p>
+            </div>
+        </div>
+    `;
+
+    grid.innerHTML = card.repeat(quantidade);
+}

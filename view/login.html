@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body class="body-login">
-    <header>
-        <nav></nav>
+    <header class="header-login">
+        <img src="../assets/img/logo_invertido.png" class="logo">
+        <h2>Entre</h2>
+        <a style="color:var(--cor-primaria); margin-left: auto;">Precisa de ajuda?</a>
     </header>
 
     <main class="main-login">
@@ -31,14 +33,18 @@
                         <a href="" style="font-size: 11px; text-decoration: none; color: rgb(0, 140, 255);">Fazer login com SMS</a>
                     </div>
                     
-                    <p style="text-align: center; margin-top: 10px;">OU</p>
+                    <div class="divisor-ou">
+                        <span class="linha-ou"></span>
+                        <span>OU</span>
+                        <span class="linha-ou"></span>
+                    </div>
                     
                     <div style="margin-top: 10px; display: flex; gap: 25px;">
                         <button class="button-login2"><img class="img-button" src="../assets/img/login-button/facebook.png" alt=""> Facebook</button>
                         <button class="button-login2"><img class="img-button" src="../assets/img/login-button/pesquisa.png" alt=""> Google</button>
                         <button class="button-login2"><img class="img-button" src="../assets/img/login-button/logotipo-da-apple.png" alt=""> Apple</button>
                     </div>
-                    <div style="text-align: center; margin-top: 40px;">Novo na Xhopii? <a style="text-decoration: none; color: orangered;" href="cadastro-cliente.html">Cadastrar</a></div>
+                    <div style="text-align: center; margin-top: 40px; color: var(--cor-cinza-escuro)">Novo na Xhopii? <a style="text-decoration: none; color: orangered;" href="cadastro-cliente.html">Cadastrar</a></div>
                 </form>
             </div>
         </section>
@@ -46,7 +52,6 @@
 
     <footer></footer>
     <script src="../assets/script.js"></script>
-    <script>renderHeader(false);</script>
     <script>renderFooter(false)</script>
 </body>
 </html>

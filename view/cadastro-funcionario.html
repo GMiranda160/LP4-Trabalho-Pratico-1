@@ -7,19 +7,12 @@
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <header class="topo">
-        <div class="topo_marca">
-            <img src="../assets/logo.png" alt="Logo Xhopii">
-            <span>Xhopii</span>
-        </div>
-        <a class="topo_acao" href="../index.html">Sair</a>
-        
-    </header>
+    <header></header>
     
     
     <main class="conteudo">
         <section class="card card--largo" aria-labelledby="titulo-func">
-            <hi class="card_titulo" id="titulo-func">Cadastrar Funcionario</hi>
+            <h1 class="card_titulo" id="titulo-func">Cadastrar Funcionário</h1>
 
             <form id="form-funcionario" novalidate>
                 <div class="campo">
@@ -44,7 +37,7 @@
 
                 <div class="campo">
                     <label for="telefone-func">Telefone</label>
-                    <label type="tel" id="telefone-func" name="telefone" placeholder="Telefone" maxlenght="15" required>
+                    <input type="tel" id="telefone-func" name="telefone" placeholder="Telefone" maxlength="15" required>
                 </div>
 
                 <div class="campo">
@@ -68,17 +61,19 @@
                 </div>
 
                
-                <div class="campo">
-                    <label for="foto-func">Foto</label>
-                    <input type="file" id="foto-func" name="foto" accept="image/*">
+                <div class="campo campo-foto">
+                    <label class="foto-titulo">Selecionar foto de perfil</label>
+                    <div class="foto-opcoes">
+                        <label for="foto-func" class="btn-escolher-arquivo">Escolher arquivo</label>
+                        <input type="file" id="foto-func" name="foto" accept="image/*" class="input-arquivo">
+                        <span class="arquivo-nome">Nenhum arquivo escolhido</span>
+                    </div>
                 </div>
 
                 <button type="submit" class="btn">Cadastrar</button>
             </form>
         </section>
     </main>
-
-    <script src="../script.js"></script>
 
     <footer></footer>
     <script src="../assets/script.js"></script>

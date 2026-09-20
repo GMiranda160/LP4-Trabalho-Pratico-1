@@ -7,20 +7,11 @@
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <header class="topo">
-        <div class="topo-marca">
-            <img src="../assets/img/logo.png" alt="Logo Xhopii">
-            <span>Xhopii</span>
-        </div>
-        <a class="topo_acao" href="../index.html">Sair</a>
-        
-    </header>
-
-    
+    <header></header>   
 
     <main class="conteudo">
         <section class="card card--largo" aria-labelledby="titulo-cliente">
-            <h1 class="card__titulo" id="titulo-cliente">Cadastro de Cliente</h1>
+            <h1 class="card__titulo" id="titulo-cliente">Cadastrar Cliente</h1>
 
             <form id="form-cliente" novalidate>
                 <div class="campo">
@@ -58,12 +49,16 @@
                     <input type="password" id="senha-cliente" name="senha" placeholder="Senha" required>
                 </div>
 
-                <div class="campo">
-                    <label for="foto-cliente">Foto</label>
-                    <input type="file" id="foto-cliente" name="foto" accept="image/*">
+                <div class="campo campo-foto">
+                    <label class="foto-titulo">Selecionar foto de perfil</label>
+                    <div class="foto-opcoes">
+                        <label for="foto-cliente" class="btn-escolher-arquivo">Escolher arquivo</label>
+                        <input type="file" id="foto-cliente" name="foto" accept="image/*" class="input-arquivo">
+                        <span class="arquivo-nome">Nenhum arquivo escolhido</span>
+                    </div>
                 </div>
 
-                <button type="submit" class="btn">Cadastrar Cliente</button>
+                <button type="submit" class="btn">Cadastrar</button>
             </form>
             <!-- Formulário de Cadastro de Cliente -->
         </section>
@@ -71,5 +66,7 @@
 
     <footer></footer>
     <script src="../assets/script.js"></script>
+    <script>renderHeader(false)</script>
+    <script>renderFooter(false)</script>
 </body>
 </html>
