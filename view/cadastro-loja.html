@@ -7,14 +7,7 @@
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <header class="topo">
-        <div class="topo_marca">
-            <img src="../assets/logo.png" alt="Logo Xhopii">
-            <span>Xhopii</span>
-        </div>
-        <a class="topo_acao" href="../index.html">Sair</a>
-        
-    </header>
+    <header></header>
 
     <main class="conteudo">
         <section class="card card--largo" aria-labelledby="titulo-loja">
@@ -23,12 +16,12 @@
             <form id="form-loja" novalidate>
                 <div class="campo">
                     <label for="nome-loja">Nome da Loja</label>
-                    <input type="text" id="nome-loja" name="nome-loja" required>
+                    <input type="text" id="nome-loja" name="nome-loja" placeholder="Nome da Loja" required>
                 </div>
 
                 <div class="campo">
                     <label for="cnpj">CNPJ</label>
-                    <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" maxlength="18" required>
+                    <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ" maxlength="18" required>
                 </div>
 
                 <div class="campo">
@@ -36,29 +29,57 @@
                     <input type="email" id="email-loja" name="email-loja" placeholder="Email" required>
                 </div>
                 
-
                 <div class="campo">
                     <label for="telefone-loja">Telefone</label>
                     <input type="tel" id="telefone-loja" name="telefone-loja" placeholder="Telefone" maxlength="15" required>
                 </div>
 
                 <div class="campo">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" name="endereco" placeholder="Rua, número, cidade -UF" required>
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" placeholder="CEP" maxlength="9" required>
                 </div>
 
                 <div class="campo">
-                    <label for="foto-loja">Selecionar Foto da loja: </label>
-                    <input type="file" id="foto-loja" name="foto" accept="image/*">
+                    <label for="logradouro">Logradouro</label>
+                    <input type="text" id="logradouro" name="logradouro" placeholder="Logradouro" required>
+                </div>
+
+                <div class="campo">
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" name="numero" placeholder="Número" required>
+                </div>
+
+                <div class="campo">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
+                </div>
+
+                <div class="campo">
+                    <label for="estado">Estado (UF)</label>
+                    <input type="text" id="estado" name="estado" placeholder="Estado (UF)" maxlength="2" required>
+                </div>
+
+                <div class="campo campo-foto">
+                    <label class="foto-titulo">Selecionar Foto da loja</label>
+                    <div class="foto-opcoes">
+                        <label for="foto-func" class="btn-escolher-arquivo">Escolher arquivo</label>
+                        <input type="file" id="foto-func" name="foto" accept="image/*" class="input-arquivo">
+                        <span class="arquivo-nome">Nenhum arquivo escolhido</span>
+                    </div>
                 </div>
 
                 <button type="submit" class="btn">Cadastrar</button>
             </form>
-            <!-- Formulário de Cadastro de Loja -->
         </section>
     </main>
 
     <footer></footer>
     <script src="../assets/script.js"></script>
+    <script>renderHeader(false); renderFooter(false)</script>
 </body>
 </html>
