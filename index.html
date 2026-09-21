@@ -7,9 +7,34 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <header></header>
+    <header class="topo">
+        <div class="topo_marca">
+            <img src="assets/img/logo.png" alt="Logo Xhopii">
+            <span>Xhopii</span>
+            <small>Entre</small>
+        </div>
+        <a class="topo_acao" href="#">Precisa de ajuda?</a>
 
-    <main>
+    </header>
+
+    <main class="conteudo" style="background: var(--laranja); padding: 70px 20px;">
+        <section class="card" aria-labelledby="titulo-login">
+            <h1 class="card_titulo" id="titulo-login">Login</h1>
+
+            <form id="form-login" novalidate>
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                </div>
+
+                <button type="submit" class="btn">Enter</button>
+            </form>
+        </section>
         <!-- Carrossel Bootstrap -->
 
         <!-- Produtos - Descobertas do Dia -->
