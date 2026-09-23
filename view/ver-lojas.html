@@ -11,13 +11,16 @@
         <nav></nav>
     </header>
 
-    <main>
-        <section>
-            <!-- Listagem de Lojas -->
+    <main class="background-cinza">
+        <section class="background-conteudo">
+            <div class="titulo-grid"><h2>Lojas</h2></div>
+            <div class="grid-layout grid-layout--lojas"></div>
         </section>
     </main>
 
     <footer></footer>
     <script src="../assets/script.js"></script>
+    <script>renderHeader(false); renderFooter(false)</script>
+    <script>renderGridLojas(lojasExemplo);</script>
 </body>
 </html>

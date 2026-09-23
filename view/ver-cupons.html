@@ -11,13 +11,16 @@
         <nav></nav>
     </header>
 
-    <main>
-        <section>
-            <!-- Listagem de Cupons de Desconto -->
+    <main class="background-cinza">
+        <section class="background-conteudo">
+            <div class="titulo-grid"><h2>Cupons de Desconto</h2></div>
+            <div class="grid-layout grid-layout--cupons"></div>
         </section>
     </main>
 
     <footer></footer>
     <script src="../assets/script.js"></script>
+    <script>renderHeader(false); renderFooter(false)</script>
+    <script>renderGridCupons(cuponsExemplo);</script>
 </body>
 </html>

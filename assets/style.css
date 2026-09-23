@@ -539,7 +539,11 @@ header {
     gap: 1.25rem;
 }
 
-.card-produto {
+.card-produto,
+.card-cliente,
+.card-funcionario,
+.card-cupom,
+.card-loja {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -556,7 +560,11 @@ header {
     font-size: 0.9rem;
 }
 
-.card-produto:hover {
+.card-produto:hover,
+.card-cliente:hover,
+.card-funcionario:hover,
+.card-cupom:hover,
+.card-loja:hover {
     border: 0.125rem solid rgba(251, 85, 48, 0.9);
 }
 
@@ -594,4 +602,59 @@ header {
 
 .card-preco-produto h4 {
     color: var(--cor-primaria);
+}
+
+.grid-layout--clientes,
+.grid-layout--funcionarios,
+.grid-layout--cupons,
+.grid-layout--lojas {
+    grid-template-columns: repeat(auto-fill, 1fr);
+}
+
+.card-cliente img,
+.card-funcionario img,
+.card-cupom img,
+.card-loja img {
+    width: 7rem;
+    height: 7rem;
+    max-height: none;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0.5rem 0;
+}
+
+.card-nome-cliente,
+.card-nome-funcionario,
+.card-nome-cupom,
+.card-nome-loja {
+    color: rgb(109, 109, 109);
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0.25rem 0 1rem 0;
+    text-align: center;
+}
+
+.card-info-cliente,
+.card-info-funcionario,
+.card-info-cupom,
+.card-info-loja {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 97.5%;
+    margin-bottom: 1.25rem;
+    gap: 0.5rem 0.25rem;
+}
+
+.card-info-cliente h4,
+.card-info-funcionario h4,
+.card-info-cupom h4,
+.card-info-loja h4 {
+    color: rgba(0, 0, 0, 0.863);
+}
+
+.card-info-cliente p,
+.card-info-funcionario p,
+.card-info-cupom p,
+.card-info-loja p {
+    overflow-wrap: anywhere;
 }

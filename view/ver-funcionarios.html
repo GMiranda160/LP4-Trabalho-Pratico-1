@@ -11,13 +11,16 @@
         <nav></nav>
     </header>
 
-    <main>
-        <section>
-            <!-- Listagem de Funcionários -->
+    <main class="background-cinza">
+        <section class="background-conteudo">
+            <div class="titulo-grid"><h2>Funcionários</h2></div>
+            <div class="grid-layout grid-layout--funcionarios"></div>
         </section>
     </main>
 
     <footer></footer>
     <script src="../assets/script.js"></script>
+    <script>renderHeader(false); renderFooter(false)</script>
+    <script>renderGridFuncionarios(funcionariosExemplo);</script>
 </body>
 </html>
