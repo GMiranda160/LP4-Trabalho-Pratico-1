@@ -339,6 +339,225 @@ header {
     background-color: var(--cor-cinza-claro);
 }
 
+/*-----------(produtos)----------------*/
+
+.produto-produtos{
+    display: flex;
+    width: 1000px;
+    margin: 40px auto;
+    gap: 30px;
+}
+
+.miniaturas {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.miniatura {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.miniatura:hover {
+    border: 1px solid #ff5733;
+}
+
+.miniatura.selecionada {
+    border: 2px solid #ff5733;
+}
+
+.imagem-produto {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-produto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.informacoes {
+    width: 400px;
+}
+
+.informacoes h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.informacoes h2 {
+    color: #ff5733;
+    margin-bottom: 5px;
+}
+
+.informacoes p {
+    margin: 8px 0;
+}
+
+.opcoes {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.opcoes button {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.opcoes button:hover {
+    border-color: #ff5733;
+}
+
+.opcoes button.selecionado {
+    border: 2px solid #ff5733;
+    color: #ff5733;
+}
+
+.comprar {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+}
+
+.comprar:hover {
+    background-color: #e94b2c;
+}
+
+/*--------------------(Index)--------------*/
+
+.index-carrossel {
+    width: 750px;
+    height: 240px;
+    margin: 25px auto 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-carrossel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.index-promocao {
+    width: 650px;
+    height: 50px;
+    margin: 35px auto 25px;
+    text-align: center;
+}
+
+.index-promocao img {
+    width: 100%;
+    height: 65px;
+    object-fit: cover;
+}
+
+.index-produtos {
+    width: 850px;
+    margin: 0 auto 30px;
+}
+
+.index-produtos h2 {
+    text-align: center;
+    font-size: 10px;
+    font-weight: normal;
+    color: #ff5733;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+
+.index-lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.index-card {
+    height: 185px;
+    background-color: white;
+    border: 1px solid #eee;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    padding: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.index-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.index-card img {
+    width: 100%;
+    height: 105px;
+    object-fit: contain;
+}
+
+
+.index-card p {
+    font-size: 9px;
+    color: #777;
+    height: 25px;
+    margin: 3px 0;
+    overflow: hidden;
+}
+
+.index-card strong {
+    display: block;
+    color: #ff5733;
+    font-size: 9px;
+}
+
+
+.index-card span {
+    display: block;
+    color: #444444;
+    font-size: 8px;
+    margin-top: 3px;
+}
+
+/*----------------(Redefinir-senha)------------------*/
+.redefinir-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redefinir-base{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    width: 450px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-shadow: 0px 0px 5px 5px rgb(197, 197, 197);
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.redefinir-input{
+    height: 40px;
+    width: 330px;
+    padding-left: 20px;
+}
 /* 
 ==========================================
 2. FORMULÁRIOS DE CADASTRO (DEV 2)

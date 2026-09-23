@@ -12,9 +12,84 @@
     </header>
 
     <main>
-        <section>
-            <!-- Visualização de Produto Específico -->             
-        </section>
+            <section class="produto-produtos">
+            <!-- Visualização de Produto Específico -->
+            <!-- Miniaturas -->
+            <div class="miniaturas">
+                <img src="../assets/img/camisa/preto.jpeg"
+                    class="miniatura selecionada"
+                    onclick="selecionarImagem(this)">
+
+                <img src="../assets/img/camisa/cinza.jpeg"
+                    class="miniatura"
+                    onclick="selecionarImagem(this)">
+
+                <img src="../assets/img/camisa/verde.jpeg"
+                    class="miniatura"
+                    onclick="selecionarImagem(this)">
+
+                <img src="../assets/img/camisa/azul.jpeg"
+                    class="miniatura"
+                    onclick="selecionarImagem(this)">
+
+                <img src="../assets/img/camisa/rosa.jpeg"
+                    class="miniatura"
+                    onclick="selecionarImagem(this)">
+            </div>
+
+
+            <!-- Imagem principal -->
+            <div class="imagem-produto">
+                <img id="imagemPrincipal"
+                    src="../assets/img/camisa/preto.jpeg">
+            </div>
+
+
+            <!-- Informações -->
+            <div class="informacoes">
+
+                <h1>Camisa Desenvolvedor Front-End CSS</h1>
+
+                <h2>R$56,90</h2>
+
+                <p>171 peças disponíveis</p>
+
+                <p>Modelos:</p>
+
+                <div class="opcoes">
+
+                    <button onclick="selecionarCor(this)">Preto</button>
+                    <button onclick="selecionarCor(this)">Azul</button>
+                    <button onclick="selecionarCor(this)">Verde</button>
+                    <button onclick="selecionarCor(this)">Cinza</button>
+                    <button onclick="selecionarCor(this)">Rosa</button>
+
+                </div>
+
+
+                <p>Tamanhos:</p>
+
+                <div class="opcoes">
+
+                    <button onclick="selecionarTamanho(this)">P</button>
+                    <button onclick="selecionarTamanho(this)">M</button>
+                    <button onclick="selecionarTamanho(this)">G</button>
+                    <button onclick="selecionarTamanho(this)">GG</button>
+
+                </div>
+
+
+                <p id="tamanhoSelecionado">
+                    Tamanho Selecionado: P
+                </p>
+
+                <button class="comprar">
+                    Comprar Agora
+                </button>
+
+            </div>
+
+        </section>          
     </main>
 
     <footer></footer>

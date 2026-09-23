@@ -308,3 +308,77 @@ function renderGridCupons(cupons) {
         `;
     }).join('');
 }
+
+function selecionarImagem(imagem) {
+
+    // Troca a imagem principal
+    document.getElementById("imagemPrincipal").src = imagem.src;
+
+    // Remove a seleção das outras imagens
+    const miniaturas = document.querySelectorAll(".miniatura");
+
+    miniaturas.forEach(function(item) {
+        item.classList.remove("selecionada");
+    });
+
+    // Marca a imagem clicada
+    imagem.classList.add("selecionada");
+}
+
+
+function selecionarCor(botao) {
+
+    const botoes = document.querySelectorAll(".opcoes button");
+
+    // Remove seleção
+    botoes.forEach(function(item) {
+        item.classList.remove("selecionado");
+    });
+
+    // Seleciona o botão clicado
+    botao.classList.add("selecionado");
+}
+
+
+function selecionarTamanho(botao) {
+
+    const botoes = botao.parentElement.querySelectorAll("button");
+
+    botoes.forEach(function(item) {
+        item.classList.remove("selecionado");
+    });
+
+    botao.classList.add("selecionado");
+
+    document.getElementById("tamanhoSelecionado").textContent =
+        "Tamanho Selecionado: " + botao.textContent;
+}
+
+let indexBannerAtual = 0;
+
+const indexBanners = [
+    "assets/img/banner1.png",
+    "assets/img/banner2.png",
+    "assets/img/banner3.png"
+];
+
+
+function indexTrocarBanner(direcao) {
+
+    indexBannerAtual += direcao;
+
+    if (indexBannerAtual >= indexBanners.length) {
+        indexBannerAtual = 0;
+    }
+
+    if (indexBannerAtual < 0) {
+        indexBannerAtual = indexBanners.length - 1;
+    }
+
+    document.getElementById("index-banner").src =
+        indexBanners[indexBannerAtual];
+}
+
+function abrirProduto() {
+    window.location.href = "view/produto.html";
+}
