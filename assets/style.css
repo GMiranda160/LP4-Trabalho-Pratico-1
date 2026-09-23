@@ -9,12 +9,13 @@
    --cor-secundaria: rgba(255, 120, 62);
    --cor-cinza-claro: rgba(245, 245, 245);
    --cor-cinza-escuro: rgb(160, 160, 160);
+   --cor-texto: rgb(68, 68, 68);
 }
    
 /* Para usar um padrão do root basta usar a seguinte anotação:
    nome_da_propriedade: var(--nome-da-variavel);
    Exemplo:
-   color: var(--cor-primaria); << Ele vai entender que é aquele laranja forte.   */
+   color: var(--cor-primaria); */
 
 * {
    margin: 0;
@@ -71,7 +72,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 0.75rem 2.5rem;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 /* Links do menu de navegação */
@@ -343,9 +344,11 @@ header {
 
 .produto-produtos{
     display: flex;
-    width: 1000px;
-    margin: 40px auto;
-    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 5vh 0;
+    gap: 2vw;
 }
 
 .miniaturas {
@@ -364,11 +367,11 @@ header {
 }
 
 .miniatura:hover {
-    border: 1px solid #ff5733;
+    border: 1px solid var(--cor-primaria);
 }
 
 .miniatura.selecionada {
-    border: 2px solid #ff5733;
+    border: 2px solid var(--cor-primaria);
 }
 
 .imagem-produto {
@@ -395,7 +398,7 @@ header {
 }
 
 .informacoes h2 {
-    color: #ff5733;
+    color: var(--cor-primaria);
     margin-bottom: 5px;
 }
 
@@ -411,22 +414,22 @@ header {
 
 .opcoes button {
     background-color: white;
-    border: 1px solid #ddd;
+    border: 2px solid var(--cor-cinza-claro);
     padding: 10px 15px;
     cursor: pointer;
 }
 
 .opcoes button:hover {
-    border-color: #ff5733;
+    border-color: var(--cor-primaria);
 }
 
 .opcoes button.selecionado {
-    border: 2px solid #ff5733;
-    color: #ff5733;
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria);
 }
 
 .comprar {
-    background-color: #ff5733;
+    background-color: var(--cor-primaria);
     color: white;
     border: none;
     padding: 12px 25px;
@@ -434,103 +437,116 @@ header {
 }
 
 .comprar:hover {
-    background-color: #e94b2c;
+    background-color: var(--cor-secundaria);
 }
 
 /*--------------------(Index)--------------*/
 
+.index-container {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
 .index-carrossel {
-    width: 750px;
-    height: 240px;
-    margin: 25px auto 15px;
-    position: relative;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.index-carrossel .carousel,
+.index-carrossel .carousel-inner {
+    height: 100%;
 }
 
 .index-carrossel img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
 .index-promocao {
-    width: 650px;
-    height: 50px;
-    margin: 35px auto 25px;
+    height: auto;
     text-align: center;
 }
 
 .index-promocao img {
     width: 100%;
-    height: 65px;
+    height: 10vh;
     object-fit: cover;
-}
-
-.index-produtos {
-    width: 850px;
-    margin: 0 auto 30px;
 }
 
 .index-produtos h2 {
     text-align: center;
-    font-size: 10px;
+    font-size: 1.125rem;
     font-weight: normal;
-    color: #ff5733;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
+    color: var(--cor-primaria);
+    border-bottom: 0.0625rem solid var(--cor-primaria);
+    padding-bottom: 0.625rem;
 }
-
 
 .index-lista-produtos {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-    margin-top: 10px;
+    gap: 0.75rem;
+    margin-top: 0.625rem;
 }
 
 .index-card {
-    height: 185px;
+    height: 15rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+        "img img"
+        "p p"
+        "strong span";
     background-color: white;
-    border: 1px solid #eee;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
-    padding: 8px;
+    border: 0.0625rem solid var(--cor-cinza-claro);
+    box-shadow: 0 0.0625rem 0.3125rem rgba(0, 0, 0, 0.08);
+    padding: 0.5rem;
     box-sizing: border-box;
     cursor: pointer;
 }
 
 .index-card:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.18);
 }
 
 .index-card img {
+    grid-area: img;
     width: 100%;
-    height: 105px;
+    height: 8.5rem;
     object-fit: contain;
 }
 
 
 .index-card p {
-    font-size: 9px;
-    color: #777;
-    height: 25px;
-    margin: 3px 0;
+    grid-area: p;
+    font-size: 0.8125rem;
+    color: var(--cor-cinza-escuro);
+    height: 2.625rem;
+    margin: 0.1875rem 0;
     overflow: hidden;
 }
 
 .index-card strong {
-    display: block;
-    color: #ff5733;
-    font-size: 9px;
+    grid-area: strong;
+    align-self: end;
+    color: var(--cor-primaria);
+    font-size: 0.875rem;
 }
 
 
 .index-card span {
-    display: block;
-    color: #444444;
-    font-size: 8px;
-    margin-top: 3px;
+    grid-area: span;
+    align-self: end;
+    justify-self: end;
+    color: var(--cor-texto);
+    font-size: 0.6875rem;
 }
 
 /*----------------(Redefinir-senha)------------------*/

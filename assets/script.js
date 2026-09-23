@@ -328,15 +328,31 @@ function selecionarImagem(imagem) {
 
 function selecionarCor(botao) {
 
-    const botoes = document.querySelectorAll(".opcoes button");
+    const botoes = botao.parentElement.querySelectorAll("button");
 
-    // Remove seleção
     botoes.forEach(function(item) {
         item.classList.remove("selecionado");
     });
 
-    // Seleciona o botão clicado
     botao.classList.add("selecionado");
+
+    const cores = {
+        "Preto": "preto",
+        "Azul": "azul",
+        "Verde": "verde",
+        "Cinza": "cinza",
+        "Rosa": "rosa"
+    };
+
+    const cor = cores[botao.textContent.trim()];
+    if (!cor) return;
+
+    const miniatura = Array.from(document.querySelectorAll(".miniatura"))
+        .find(function(item) {
+            return item.src.toLowerCase().includes(`/${cor}.jpeg`);
+        });
+
+    if (miniatura) selecionarImagem(miniatura);
 }
 
 
