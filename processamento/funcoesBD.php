@@ -18,8 +18,18 @@ function inserirCliente($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $em
 
     try {
         $stmt = mysqli_prepare($conexao, $sql);
-        mysqli_stmt_bind_param($stmt, "ssssssss",
-            $nome, $sobrenome, $cpf, $dataNascimento, $telefone, $email, $senhaHash, $fotoPerfil);
+        mysqli_stmt_bind_param(
+            $stmt,
+            "ssssssss",
+            $nome,
+            $sobrenome,
+            $cpf,
+            $dataNascimento,
+            $telefone,
+            $email,
+            $senhaHash,
+            $fotoPerfil
+        );
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
         mysqli_close($conexao);
@@ -33,9 +43,12 @@ function inserirCliente($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $em
 function retornarClientes()
 {
     $conexao = conectarBD();
-    $consulta = "SELECT * FROM clientes";
-    $listaClientes = mysql_query($conexao, $consulta);
-    return ($listaClientes);
+    $consulta = "SELECT idCliente, nome, sobrenome, cpf, dataNascimento, telefone, email, fotoPerfil
+                 FROM clientes ORDER BY nome";
+    $resultado = mysqli_query($conexao, $consulta);
+    $clientes = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+    mysqli_close($conexao);
+    return $clientes;
 }
 
 ?>

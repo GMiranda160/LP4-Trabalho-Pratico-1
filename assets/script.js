@@ -155,23 +155,37 @@ const clientesExemplo = [
 
 // FUNÇÃO DE RENDERIZAR O GRID DE CLIENTES NO HTML
 // Recebe a lista de clientes como parâmetro. Chamar com: <script>renderGridClientes(clientes);</script>
+function formatarData(data) {
+    if (!data) return '';
+    const [ano, mes, dia] = data.split('-');
+    return `${dia}/${mes}/${ano}`;
+}
+
+function escaparHTML(texto) {
+    const div = document.createElement('div');
+    div.textContent = texto ?? '';
+    return div.innerHTML;
+}
+
 function renderGridClientes(clientes) {
     const grid = document.querySelector('.grid-layout--clientes');
     if (!grid) return;
 
     grid.innerHTML = clientes.map((cliente) => {
         const nomeCompleto = `${cliente.nome} ${cliente.sobrenome}`;
-        const avatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(nomeCompleto)}&size=256&rounded=true&background=random&color=fff`;
-        const nascimento = formatarData(cliente.nascimento);
+        const avatar = cliente.fotoPerfil
+            ? `../processamento/${cliente.fotoPerfil}`
+            : `https://ui-avatars.com/api/?name=${encodeURIComponent(nomeCompleto)}&size=256&rounded=true&background=random&color=fff`;
+        const nascimento = formatarData(cliente.dataNascimento);
 
         return `
             <div class="card-cliente">
-                <img src="${avatar}" alt="Foto de ${nomeCompleto}">
-                <p class="card-nome-cliente">${nomeCompleto}</p>
+                <img src="${avatar}" alt="Foto de ${escaparHTML(nomeCompleto)}">
+                <p class="card-nome-cliente">${escaparHTML(nomeCompleto)}</p>
                 <div class="card-info-cliente">
-                    <h4>CPF:</h4><p>${cliente.cpf}</p>
-                    <h4>Telefone:</h4><p>${cliente.telefone}</p>
-                    <h4>Email:</h4><p>${cliente.email}</p>
+                    <h4>CPF:</h4><p>${escaparHTML(cliente.cpf)}</p>
+                    <h4>Telefone:</h4><p>${escaparHTML(cliente.telefone)}</p>
+                    <h4>Email:</h4><p>${escaparHTML(cliente.email)}</p>
                     <h4>Nascimento:</h4><p>${nascimento}</p>
                 </div>
             </div>
@@ -179,10 +193,14 @@ function renderGridClientes(clientes) {
     }).join('');
 }
 
-// FUNÇÃO QUE CONVERTE DATA ISO (aaaa-mm-dd) PARA O FORMATO BRASILEIRO (dd/mm/aaaa)
-function formatarData(iso) {
-    const partes = iso.split('-');
-    return partes.length === 3 ? `${partes[2]}/${partes[1]}/${partes[0]}` : iso;
+async function carregarClientes() {
+    try {
+        const resposta = await fetch('../processamento/listarClientes.php');
+        const clientes = await resposta.json();
+        renderGridClientes(clientes);
+    } catch (erro) {
+        console.error('Erro ao carregar clientes:', erro);
+    }
 }
 
 // DADOS DE FUNCIONÁRIOS CADASTRADOS (EXEMPLO HARDCODED)
