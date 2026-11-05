@@ -2,16 +2,40 @@
 
 function conectarBD()
 {
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     $conexao = mysqli_connect("localhost", "root", "", "xhopii");
-    return ($conexao);
+    mysqli_set_charset($conexao, "utf8mb4");
+    return $conexao;
 }
 
-function inserirCliente($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $email, $senha)
+function inserirCliente($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $email, $senha, $fotoPerfil = null)
 {
     $conexao = conectarBD();
-    $consulta = "INSERT INTO clientes (nome, sobrenome, cpf, dataNascimento, telefone, email, senha)
-                 VALUES ($nome, $sobrenome, $cpf, $dataNascimento, $telefone, $email, $senha)";
-    mysqli_query($conexao, $consulta);                
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+
+    $sql = "INSERT INTO clientes (nome, sobrenome, cpf, dataNascimento, telefone, email, senha, fotoPerfil)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+    try {
+        $stmt = mysqli_prepare($conexao, $sql);
+        mysqli_stmt_bind_param($stmt, "ssssssss",
+            $nome, $sobrenome, $cpf, $dataNascimento, $telefone, $email, $senhaHash, $fotoPerfil);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        mysqli_close($conexao);
+        return true;
+    } catch (mysqli_sql_exception $e) {
+        error_log($e->getMessage());
+        return false;
+    }
+}
+
+function retornarClientes()
+{
+    $conexao = conectarBD();
+    $consulta = "SELECT * FROM clientes";
+    $listaClientes = mysql_query($conexao, $consulta);
+    return ($listaClientes);
 }
 
 ?>
